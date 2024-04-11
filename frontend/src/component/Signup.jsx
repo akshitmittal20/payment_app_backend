@@ -124,7 +124,7 @@ export function Signup() {
                     password.trim();
                     try {
                       const response = await axios.post(
-                        "payment-app-l3rw.vercel.app/api/v1/user/signup",
+                        "https://payment-app-l3rw.vercel.app/api/v1/user/signup",
                         {
                           username: email,
                           firstname: firstname,
