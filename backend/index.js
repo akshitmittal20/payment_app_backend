@@ -12,7 +12,7 @@ const cors=require("cors");
 
 app.use(cors(
     {
-        origin:["https://payment-app-lyart.vercel.app"],
+        origin:["https://payment-app-lyart.vercel.app/Signin"],
         methods:["POST","GET","PUT"],
         credentials: true
     }
