@@ -7,7 +7,7 @@ export const BalanceAtom = atom({
     key: "Balance",
     get: async () => {
       const response = await axios.get(
-        "http://localhost:3000/api/v1/account/balance",
+        "payment-app-l3rw.vercel.app/api/v1/account/balance",
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -23,7 +23,7 @@ const UserDataSelector = selector({
   key: "UserDataSelector",
   get: async () => {
     const response = await axios.get(
-      "http://localhost:3000/api/v1/user/userprofile",
+      "payment-app-l3rw.vercel.app/api/v1/user/userprofile",
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
