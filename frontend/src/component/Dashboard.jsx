@@ -48,7 +48,7 @@ export function Dashboard() {
     async function balance ()  {
       setbalancestatus(true)
       const response = await axios.get(
-        "https://payment-app-l3rw.vercel.app/api/v1/account/balance",
+        "https://payment-app-backend-ruby.vercel.app/api/v1/account/balance",
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -66,7 +66,7 @@ export function Dashboard() {
     const fetch = async () => {
       try {
         const response = await axios.get(
-          `https://payment-app-l3rw.vercel.app/api/v1/user/bulk?name=${debounce}`,
+          `https://payment-app-backend-ruby.vercel.app/api/v1/user/bulk?name=${debounce}`,
           {
             headers: {
               Authorization: `Bearer +${localStorage.getItem("token")}`,

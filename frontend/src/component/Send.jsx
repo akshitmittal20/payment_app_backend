@@ -101,7 +101,7 @@ export function Send() {
                       }
                       try {
                         const response = await axios.post(
-                          "http://localhost:3000/api/v1/account/transfer",
+                          "https://payment-app-backend-ruby.vercel.app/api/v1/account/transfer",
                           {
                             to: id,
                             amount: amount,
