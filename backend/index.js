@@ -10,7 +10,13 @@ app.use(bodyParser.json());
 
 const cors=require("cors");
 
-app.use(cors());
+app.use(cors(
+    {
+        origin:["https://payment-app-lyart.vercel.app/Signin"],
+        methods:["POST","GET","PUT","DELETE"],
+        credentials: true
+    }
+));
 
 app.use("/api/v1",rootRouter)
 
