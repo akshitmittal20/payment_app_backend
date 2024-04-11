@@ -5,6 +5,8 @@ const { user, account } = require("../db");
 const { JWT_secret } = require("../config");
 const { authMiddleware } = require("../middleware");
 const router = express.Router();
+const dotenv = require('dotenv');
+
 
 router.post("/signup", async (req, res) => {
   const userpayload = req.body;
@@ -31,7 +33,8 @@ router.post("/signup", async (req, res) => {
         userId: userid,
         balance: Math.ceil(Math.random() * 1000000),
       });
-      const token = jwt.sign({ userid: newuser._id }, JWT_secret);
+      let jwtSecretKey = process.env.JWT_SECRET_KEY;
+      const token = jwt.sign({ userid: newuser._id }, jwtSecretKey);
 
       res.status(200).json({
         message: "User created successfully",
@@ -60,7 +63,8 @@ router.post("/signin", async (req, res) => {
     });
     console.log(userfind)
     if (userfind) {
-      const token = jwt.sign({ userid: userfind._id }, JWT_secret);
+        let jwtSecretKey = process.env.JWT_SECRET_KEY;
+      const token = jwt.sign({ userid: userfind._id }, jwtSecretKey);
       req.userid = userfind._id;
       res.status(200).json({
         message: "Signed in successfully.",
