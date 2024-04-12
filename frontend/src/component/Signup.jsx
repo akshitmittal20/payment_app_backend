@@ -124,7 +124,7 @@ export function Signup() {
                     password.trim();
                     try {
                       const response = await axios.post(
-                        "http://localhost:3000/api/v1/user/signup",
+                        "https://payment-app-backend-ruby.vercel.app/api/v1/user/signup",
                         {
                           username: email,
                           firstname: firstname,
