@@ -5,8 +5,6 @@ const { user, account } = require("../db");
 const { JWT_secret } = require("../config");
 const { authMiddleware } = require("../middleware");
 const router = express.Router();
-const dotenv = require('dotenv');
-
 
 router.post("/signup", async (req, res) => {
   const userpayload = req.body;
@@ -33,8 +31,7 @@ router.post("/signup", async (req, res) => {
         userId: userid,
         balance: Math.ceil(Math.random() * 1000000),
       });
-      let jwtSecretKey = process.env.JWT_SECRET_KEY;
-      const token = jwt.sign({ userid: newuser._id }, jwtSecretKey);
+      const token = jwt.sign({ userid: newuser._id }, JWT_secret);
 
       res.status(200).json({
         message: "User created successfully",
@@ -54,17 +51,12 @@ router.post("/signin", async (req, res) => {
   const userpayload = req.body;
   const uservalidation = signinschema.safeParse(userpayload);
   if (uservalidation.success) {
-    console.log(userpayload.username)
-    console.log(userpayload.password)
-
-    const userfind = await user.find({
+    const userfind = await user.findOne({
       username: userpayload.username,
       password: userpayload.password,
     });
-    console.log(userfind)
     if (userfind) {
-        let jwtSecretKey = process.env.JWT_SECRET_KEY;
-      const token = jwt.sign({ userid: userfind._id }, jwtSecretKey);
+      const token = jwt.sign({ userid: userfind._id }, JWT_secret);
       req.userid = userfind._id;
       res.status(200).json({
         message: "Signed in successfully.",
@@ -123,7 +115,6 @@ router.get("/userprofile", authMiddleware, async (req, res) => {
     const finduser = await user.findOne({
       _id: id,
     });
-    console.log(finduser)
 
     res.json({
       user: finduser,
@@ -132,7 +123,6 @@ router.get("/userprofile", authMiddleware, async (req, res) => {
     res.status(400).json({
       message: "Something went wrong please try again later." + e,
     });
-    console.log("userprofile- Something went wrong please try again later")
   }
 });
 
