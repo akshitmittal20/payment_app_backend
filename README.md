@@ -1,4 +1,4 @@
-# Real-TIme Transaction Web Application - https://payment-app-lyart.vercel.app/Signin
+# Real-Time Transaction Web Application - https://payment-app-lyart.vercel.app/Signin
 
 # Full Stack Web app - Frontend and Backend
 
