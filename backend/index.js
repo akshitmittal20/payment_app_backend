@@ -10,12 +10,12 @@ app.use(bodyParser.json());
 
 const cors=require("cors");
 
-// app.use(cors())
-app.use(cors({
-  origin: 'https://payment-app-lyart.vercel.app',
-  methods: ['POST', 'GET', 'OPTIONS'],
-  allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept']
-}));
+app.use(cors())
+// app.use(cors({
+//   origin: 'https://payment-app-lyart.vercel.app',
+//   methods: ['POST', 'GET', 'OPTIONS'],
+//   allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept']
+// }));
 
 //     {
 //         origin:["https://payment-app-lyart.vercel.app/Signin"],
