@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const ObjectId=mongoose.Types.ObjectId;
 
 mongoose.connect(
-  "mongodb+srv://akshitmittal20:pSD9tpjvHdOlEVax@290224.dl6gadx.mongodb.net/payment-app"
+  "you url"
 );
 
 const Userschema = mongoose.Schema({
