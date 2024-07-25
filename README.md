@@ -5,12 +5,6 @@ This is the backend part of the Real-Time Transaction Web Application. It provid
 ## Project Link
 - [Real-Time Transaction Web Application](https://payment-app-lyart.vercel.app/Signin)
 
-## Screenshots
-<img width="1265" alt="Screenshot 2024-04-12 at 3 28 11 PM" src="https://github.com/akshitmittal20/transact-ease-payment-app/assets/63283989/6781fb97-939c-4229-b76c-be40f90b5877">
-<img width="1001" alt="Screenshot 2024-04-12 at 3 27 14 PM" src="https://github.com/akshitmittal20/transact-ease-payment-app/assets/63283989/9768ac6d-5efc-43c9-9eb0-7acf787d013b">
-<img width="778" alt="Screenshot 2024-04-12 at 3 30 38 PM" src="https://github.com/akshitmittal20/transact-ease-payment-app/assets/63283989/4d9358d5-4145-4307-9387-f829690a1ea7">
-<img width="634" alt="Screenshot 2024-04-12 at 3 30 30 PM" src="https://github.com/akshitmittal20/transact-ease-payment-app/assets/63283989/b8b593e6-7602-4b6b-87f2-526d13750a0d">
-
 ## Table of Contents
 - [Prerequisites](#prerequisites)
 - [Setup Instructions](#setup-instructions)
@@ -105,27 +99,130 @@ backend/
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
+Here's the `README.md` file for the frontend part of your project:
 
+# Real-Time Transaction Web Application - Frontend
 
-# Real-Time Transaction Web Application - https://payment-app-lyart.vercel.app/Signin
+This is the frontend part of the Real-Time Transaction Web Application. It provides the user interface for user management and transactions. The frontend is built using React, Recoil, Tailwind CSS, and Axios.
 
-# Full Stack Web app - Frontend and Backend
+## Project Link
+- [Real-Time Transaction Web Application](https://payment-app-lyart.vercel.app/Signin)
 
-***Stacks : Node.js, Express, JWT Auth, Tailwind CSS, React, Recoil State management, MongoDB, Sessions***
-
-User:
-- Can create an Account
-- Can Signup
-- Can Signin
-- Can change Credentials
-- Can see and search other users
-- Can do a transaction
-- Can transfer money to a user
-- Can recieve money from a user
-
-
-
+## Screenshots
 <img width="1265" alt="Screenshot 2024-04-12 at 3 28 11 PM" src="https://github.com/akshitmittal20/transact-ease-payment-app/assets/63283989/6781fb97-939c-4229-b76c-be40f90b5877">
 <img width="1001" alt="Screenshot 2024-04-12 at 3 27 14 PM" src="https://github.com/akshitmittal20/transact-ease-payment-app/assets/63283989/9768ac6d-5efc-43c9-9eb0-7acf787d013b">
 <img width="778" alt="Screenshot 2024-04-12 at 3 30 38 PM" src="https://github.com/akshitmittal20/transact-ease-payment-app/assets/63283989/4d9358d5-4145-4307-9387-f829690a1ea7">
 <img width="634" alt="Screenshot 2024-04-12 at 3 30 30 PM" src="https://github.com/akshitmittal20/transact-ease-payment-app/assets/63283989/b8b593e6-7602-4b6b-87f2-526d13750a0d">
+
+## Table of Contents
+- [Prerequisites](#prerequisites)
+- [Setup Instructions](#setup-instructions)
+- [Running the Application](#running-the-application)
+- [Folder Structure](#folder-structure)
+- [Components](#components)
+
+## Prerequisites
+- Node.js
+- npm or yarn
+
+## Setup Instructions
+
+1. **Clone the Repository**:
+   ```bash
+   git clone git@github.com:yourusername/transact-ease-payment-app.git
+   cd transact-ease-payment-app/frontend
+   ```
+
+2. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
+
+## Running the Application
+
+To run the application locally:
+```bash
+npm run dev
+```
+The frontend application should be accessible at `http://localhost:3000`.
+
+## Folder Structure
+
+```
+frontend/
+├── atoms/
+│   ├── atoms.Signin.js
+│   ├── atomsDashboard.js
+│   ├── atomsSend.js
+│   └── atomsSignup.js
+├── public/
+│   ├── image1.png
+│   ├── image2.png
+│   ├── image3.png
+├── src/
+│   ├── assets/
+│   │   └── react.svg
+│   ├── components/
+│   │   ├── AnimationUser.jsx
+│   │   ├── Dashboard.jsx
+│   │   ├── InputBox.jsx
+│   │   ├── Logout.jsx
+│   │   ├── Me.jsx
+│   │   ├── Send.jsx
+│   │   ├── Signin.jsx
+│   │   ├── Signup.jsx
+│   │   ├── SpinAnimation.jsx
+│   │   ├── TransactionDone.jsx
+│   │   └── UserColumn.jsx
+│   ├── App.css
+│   ├── App.jsx
+│   ├── index.css
+│   ├── main.jsx
+├── .eslintrc.cjs
+├── .gitignore
+├── index.html
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── tailwind.config.js
+├── vercel.json
+├── vite.config.js
+```
+
+## Components
+
+### AnimationUser.jsx
+This component renders a loading animation for user data.
+
+### Dashboard.jsx
+This component renders the dashboard where users can see their balance, search for other users, and initiate transactions.
+
+### InputBox.jsx
+This component renders a reusable input box for forms.
+
+### Logout.jsx
+This component handles the logout functionality.
+
+### Me.jsx
+This component checks if the user is logged in and redirects accordingly.
+
+### Send.jsx
+This component handles the money transfer functionality.
+
+### Signin.jsx
+This component handles the sign-in functionality.
+
+### Signup.jsx
+This component handles the sign-up functionality.
+
+### SpinAnimation.jsx
+This component renders a loading spinner animation.
+
+### TransactionDone.jsx
+This component displays a success message after a transaction is completed.
+
+### UserColumn.jsx
+This component renders a user item in the user list.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
